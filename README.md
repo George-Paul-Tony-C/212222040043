@@ -1,8 +1,10 @@
 ﻿# 212222040043
-🔗 URL Shortener Application
+## 🔗 URL Shortener Application
 A full-stack URL shortener built with React, Material UI on the frontend and Node.js, Express, and Supabase/PostgreSQL with Prisma on the backend. It allows users to shorten long URLs, track statistics like click counts, sources, and expiration times.
 
-🗂 Project Structure
+
+## 🗂 Project Structure
+```
 bash
 Copy
 Edit
@@ -20,42 +22,46 @@ url-shortener-app/
 ├── .env
 ├── README.md
 └── package.json
-🚀 Features
-✅ Frontend
-Create up to 5 shortened URLs at a time
+```
 
-Set custom shortcodes and expiry times (in minutes)
+---
 
-View statistics: original URL, created time, expiry, total clicks
+## 🚀 Features
 
-Track detailed click info (timestamp, source, location)
+### ✅ Frontend
+- Create up to 5 shortened URLs at a time
+- Set custom shortcodes and expiry times (in minutes)
+- View statistics: original URL, created time, expiry, total clicks
+- Track detailed click info (timestamp, source, location)
+- LocalStorage to persist shortened links
+- MUI-based design with clear UI
 
-LocalStorage to persist shortened links
+### ✅ Backend
+- RESTful API for creating and fetching short URLs
+- Automatic shortcode generation (if not provided)
+- Expiry time validation and enforcement
+- Click tracking with metadata
+- Logging (optional: to Supabase or external API)
 
-MUI-based design with clear UI
+---
 
-✅ Backend
-RESTful API for creating and fetching short URLs
+## 🛠️ Tech Stack
 
-Automatic shortcode generation (if not provided)
+| Layer      | Technology                  |
+|------------|------------------------------|
+| Frontend   | React, Vite, Material UI     |
+| Backend    | Node.js, Express.js          |
+| Database   | MongoDb                      |
+| API Client | Axios                        |
+| Logging    | Custom Logger (to API)       |
 
-Expiry time validation and enforcement
+---
 
-Click tracking with metadata
 
-Logging (optional: to Supabase or external API)
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	React, Vite, Material UI
-Backend	Node.js, Express.js
-Database	Supabase (PostgreSQL)
-ORM	Prisma
-API Client	Axios
-Logging	Custom Logger (to API)
+## ⚙️ Setup Instructions
 
-⚙️ Setup Instructions
-1. Clone the Repository
+### 1. Clone the Repository
 bash
 Copy
 Edit
@@ -68,23 +74,25 @@ Copy
 Edit
 cd backend
 npm install
-⚙️ Environment Variables (.env)
-Create a .env file in the backend folder:
 
+## ⚙️ Environment Variables (.env)
+
+Create a .env file in the backend folder:
 env
 Copy
 Edit
 PORT=8000
-DATABASE_URL=your_supabase_or_postgres_url
+DATABASE_URL= mongoDbURL
 BASE_URL=http://localhost:8000
-🔄 Run Backend Server
+
+## 🔄 Run Backend Server
 bash
 Copy
 Edit
 npm run dev
 Make sure your database is accessible and Prisma is configured.
 
-🌐 Frontend Setup (/frontend)
+## 🌐 Frontend Setup (/frontend)
 📦 Install Dependencies
 bash
 Copy
@@ -98,17 +106,13 @@ env
 Copy
 Edit
 VITE_API_BASE_URL=http://localhost:8000
+
 ▶️ Run Frontend
 bash
 Copy
 Edit
 npm run dev
 App runs on http://localhost:5173 by default.
-
-📷 Screenshots
-Home Page
-
-Stats Page
 
 📡 API Endpoints
 POST /shorturls
@@ -120,7 +124,7 @@ GET /shorturls/:shortcode
 Returns: { originalUrl, createdAt, expiresAt, totalClicks, clicks[] }
 
 
-
+## 📷 Screenshots
 
 ## OutPut:
 
