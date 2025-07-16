@@ -1,6 +1,6 @@
 ﻿# 212222040043
 ## 🔗 URL Shortener Application
-A full-stack URL shortener built with React, Material UI on the frontend and Node.js, Express, and Supabase/PostgreSQL with Prisma on the backend. It allows users to shorten long URLs, track statistics like click counts, sources, and expiration times.
+A full-stack URL shortener built with React, Material UI on the frontend and Node.js, Express, and MongoDb on the backend. It allows users to shorten long URLs, track statistics like click counts, sources, and expiration times.
 
 
 ## 🗂 Project Structure
@@ -41,7 +41,7 @@ url-shortener-app/
 - Automatic shortcode generation (if not provided)
 - Expiry time validation and enforcement
 - Click tracking with metadata
-- Logging (optional: to Supabase or external API)
+- Logging
 
 ---
 
